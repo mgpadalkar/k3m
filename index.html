@@ -32,6 +32,17 @@
     .navbar-nav .nav-link {
       color: white !important;
     }
+    .dropdown-menu {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+    }
+    .dropdown-menu a {
+      color: #253658;
+      font-weight: 500;
+    }
+    .dropdown-menu a:hover {
+      background-color: #f0f4f8;
+    }
     section {
       height: 100vh;
       padding-top: 70px;
@@ -70,11 +81,21 @@
     <div class="collapse navbar-collapse" id="navMain">
       <ul class="navbar-nav ms-auto me-3">
         <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
-        <li class="nav-item"><a class="nav-link" href="#company">The Company</a></li>
+        
+        <!-- Grouped Dropdown for "About" -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarAboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarAboutDropdown">
+            <li><a class="dropdown-item" href="#about-us">About Us</a></li>
+            <li><a class="dropdown-item" href="#story">Our Story</a></li>
+            <li><a class="dropdown-item" href="#company">The Company</a></li>
+            <li><a class="dropdown-item" href="#team">Team</a></li>
+          </ul>
+        </li>
+        
         <li class="nav-item"><a class="nav-link" href="#features">Why</a></li>
-        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
         <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
         <li class="nav-item"><a class="nav-link" href="#traction">Traction</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -82,6 +103,7 @@
     </div>
   </div>
 </nav>
+
 
 <!-- Hero Section -->
 <section id="hero" class="hero text-center">
