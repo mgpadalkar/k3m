@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K3strelMark – Intelligence Within</title>
+  <meta name="description" content="6-TOPS RISC-V processor to run GenAI at the edge – privately, securely, and efficiently.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background-color: #253658;
+    }
+    .navbar-brand span {
+      background: #fff;
+      padding: 4px 14px;
+      border-radius: 28px;
+      box-shadow: 0 2px 8px rgba(38,53,88,0.10);
+      display: inline-block;
+    }
+    .navbar-brand img {
+      height: 32px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+    }
+    section {
+      height: 100vh;
+      padding-top: 70px;
+      display: flex;
+      align-items: center;
+      background-clip: padding-box;
+    }
+    .hero { background: linear-gradient(120deg, #58b5e3 0%, #253658 100%); color: white; }
+    .about, .about-us, .company, .story, .team, .partners, .contact, .traction { background: #f5f7fa; }
+    .features { background: #e9f4fb; }
+    .dark-section { background: #253658; color: white; }
+    .section-title { font-weight: 600; }
+    .rounded-circle {
+      border: 2px solid #253658;
+      object-fit: cover;
+      background: #fff;
+    }
+    @media (max-width: 767px) {
+      section { padding-top: 88px; height: auto; min-height: 100vh;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <span>
+        <img src="logo.svg" alt="K3strelMark Logo" />
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto me-3">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
+        <li class="nav-item"><a class="nav-link" href="#company">The Company</a></li>
+        <li class="nav-item"><a class="nav-link" href="#features">Why</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
+        <li class="nav-item"><a class="nav-link" href="#traction">Traction</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="hero text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Edge AI. Reimagined with RISC‑V.</h1>
+    <p class="fs-5 mt-3">
+      K3strelMark's K3M-1 is a 6-TOPS single-core processor running GenAI models—<br>
+      with <strong>real-time performance</strong>, <strong>zero cloud dependency</strong>, and <strong>full on-device privacy</strong>.
+    </p>
+    <a href="#contact" class="btn btn-light btn-lg mt-4 shadow">Become a Partner</a>
+  </div>
+</section>
+
+<!-- About Us -->
+<section id="about-us" class="about-us text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">About K3strelMark</h2>
+    <p class="lead">Founded to democratize AI at the edge, K3strelMark develops RISC-V based processors and SDKs that enable transformative on-device intelligence everywhere—efficiently, privately, and securely. Our mission: make true AI accessible to all devices, free from cloud dependency and vendor lock-in.</p>
+  </div>
+</section>
+
+<!-- Our Story -->
+<section id="story" class="story text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">Our Story</h2>
+    <p>It started with a vision: to give every device—no matter how small—the power to think. Not satisfied with power-hungry or inflexible solutions, our founders combined expertise in hardware, AI, and design to create K3M-1: a RISC-V processor that sets a new bar for edge AI. Today, we’re collaborating with real partners in robotics, health, and security.</p>
+  </div>
+</section>
+
+<!-- The Company -->
+<section id="company" class="company text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">The Company</h2>
+    <p>K3strelMark is a deep-tech startup building the future of privacy-aware, on-device AI. Backed by expertise in RISC-V and embedded AI, we work with early partners across robotics, automotive, and security. Our roadmap: validate on FPGA, develop ASIC silicon, and scale globally with a partner-first mindset.</p>
+  </div>
+</section>
+
+<!-- What Is / Product -->
+<section id="about" class="about text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">What We Built</h2>
+    <p class="lead">K3M-1 is a <strong>RISC-V AI processor</strong> that delivers <strong>real embedded AI</strong>.</p>
+    <ul class="list-unstyled fs-5 mt-3">
+      <li>✅ 6-TOPS performance — optimized for <strong>Transformers, CV, and GenAI</strong></li>
+      <li>✅ Built using Xilinx FPGA, delivering <strong>100 FPS on YOLOv12 @ 320×320</strong></li>
+      <li>✅ Architected for <strong>ultra-low power</strong>, sub-mW idle, and <strong>edge-first privacy</strong></li>
+      <li>✅ No cloud. No GPUs. No fixed-function accelerators.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Features / Why Us -->
+<section id="features" class="features text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">Why K3strelMark?</h2>
+    <div class="row">
+      <div class="col-md-3"><h5>⚡ Ultra-Low Power</h5><p>AI for always-on edge use cases without heat or battery drain.</p></div>
+      <div class="col-md-3"><h5>🔓 RISC-V + Open IP</h5><p>No vendor lock-in—fully extensible infrastructure.</p></div>
+      <div class="col-md-3"><h5>🧠 Any Model Ready</h5><p>No hardcoding. Use our SDK to plug in your own AI easily.</p></div>
+      <div class="col-md-3"><h5>🛡️ GDPR-First</h5><p>Privacy-by-design: data stays entirely on-device.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section id="team" class="team text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">Meet the Team</h2>
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <img src="karthy.jpg" class="rounded-circle mb-2" height="88" width="88" alt="Karthy, CTO" />
+        <h5>Karthy</h5>
+        <p>CTO & Co-founder<br>Surgical robotics, HW/SW codesign, PhD, 11 years experience</p>
+      </div>
+      <div class="col-md-4">
+        <img src="milind.jpg" class="rounded-circle mb-2" height="88" width="88" alt="Milind, CAIO" />
+        <h5>Milind</h5>
+        <p>Chief AI Officer<br>17 years in computer vision & AI, PhD</p>
+      </div>
+      <div class="col-md-4">
+        <img src="eleonora.jpg" class="rounded-circle mb-2" height="88" width="88" alt="Eleonora, CEO" />
+        <h5>Eleonora</h5>
+        <p>CEO & Co-founder<br>Serial founder, sales & negotiation expert</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who We're Looking For -->
+<section id="partners" class="dark-section text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">We’re Looking For</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h5>🔬 Deep Tech Collaborators</h5>
+        <p>Help us validate K3M-1 with cutting-edge R&D. Ideal for labs and universities.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>🤖 Product Testers</h5>
+        <p>OEMs in robotics, vision, IoT, surveillance—run GenAI locally with zero latency.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>💼 Strategic Investors</h5>
+        <p>Join the next AI hardware wave. Help us tape-out silicon and scale manufacturing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Traction / Roadmap -->
+<section id="traction" class="traction text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">What We’ve Achieved</h2>
+    <ul class="list-unstyled fs-5">
+      <li>✅ FPGA prototype live on Xilinx Zynq</li>
+      <li>✅ 20+ early partners in robotics, imaging, and security</li>
+      <li>🎯 Target: TRL7 on FPGA → Silicon tape-out post fundraising</li>
+      <li>📈 Roadmap: validate (2025–26) → raise + tape-out (2026–28) → expand (2028+)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">Join the Early Access Program</h2>
+    <p class="fs-5">Get access to the K3M-1 SDK, benchmark kits, and work directly with our engineering team.</p>
+    <form class="mt-4" style="max-width: 500px; margin: auto;">
+      <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+      <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+      <textarea class="form-control mb-3" rows="3" placeholder="Tell us briefly about your use case or company"></textarea>
+      <button type="submit" class="btn btn-dark btn-lg w-100">Apply Now</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 bg-dark text-light text-center">
+  <div class="container">
+    <small>AI everywhere. Control in your hands. <strong>K3strelMark – Intelligence Within</strong>. &copy; 2025</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
