@@ -1,252 +1,1064 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>K3strelMark – Intelligence Within</title>
-  <meta name="description" content="6-TOPS RISC-V processor to run GenAI at the edge – privately, securely, and efficiently.">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body, html {
-      margin: 0;
-      padding: 0;
-    }
-    .navbar {
-      background-color: #253658;
-    }
-    .navbar-brand span {
-      background: #fff;
-      padding: 4px 14px;
-      border-radius: 28px;
-      box-shadow: 0 2px 8px rgba(38,53,88,0.10);
-      display: inline-block;
-    }
-    .navbar-brand img {
-      height: 32px;
-      vertical-align: middle;
-      display: inline-block;
-    }
-    .navbar-nav .nav-link {
-      color: white !important;
-    }
-    .dropdown-menu {
-      background-color: #ffffff;
-      border: 1px solid #e0e0e0;
-    }
-    .dropdown-menu a {
-      color: #253658;
-      font-weight: 500;
-    }
-    .dropdown-menu a:hover {
-      background-color: #f0f4f8;
-    }
-    section {
-      height: 100vh;
-      padding-top: 70px;
-      display: flex;
-      align-items: center;
-      background-clip: padding-box;
-    }
-    .hero { background: linear-gradient(120deg, #58b5e3 0%, #253658 100%); color: white; }
-    .about, .about-us, .company, .story, .team, .partners, .contact, .traction { background: #f5f7fa; }
-    .features { background: #e9f4fb; }
-    .dark-section { background: #253658; color: white; }
-    .section-title { font-weight: 600; }
-    .rounded-circle {
-      border: 2px solid #253658;
-      object-fit: cover;
-      background: #fff;
-    }
-    @media (max-width: 767px) {
-      section { padding-top: 88px; height: auto; min-height: 100vh;}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K3strelMark - AI. Unplugged. Private. Real-Time.</title>
+    <meta name="description" content="The first processor that runs transformers and LLMs directly on your device—no cloud, no internet, no compromise. Intelligence Within.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">K<span class="logo-accent">3</span>strelMark</span>
+                <span class="tagline">Intelligence Within</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#business">Business</a></li>
+                <li><a href="#contact" class="nav-cta">Get Beta Access</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <span>
-        <img src="logo.svg" alt="K3strelMark Logo" />
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMain">
-      <ul class="navbar-nav ms-auto me-3">
-        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-        
-        <!-- Grouped Dropdown for "About" -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarAboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            About
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarAboutDropdown">
-            <li><a class="dropdown-item" href="#about-us">About Us</a></li>
-            <li><a class="dropdown-item" href="#story">Our Story</a></li>
-            <li><a class="dropdown-item" href="#company">The Company</a></li>
-            <li><a class="dropdown-item" href="#team">Team</a></li>
-          </ul>
-        </li>
-        
-        <li class="nav-item"><a class="nav-link" href="#features">Why</a></li>
-        <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
-        <li class="nav-item"><a class="nav-link" href="#traction">Traction</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    AI. <span class="gradient-text">Unplugged</span>. Private. Real-Time.
+                </h1>
+                <p class="hero-subtitle">
+                    The first processor that runs transformers and LLMs directly on your device—no cloud, no internet, no compromise.
+                </p>
+                
+                <!-- Performance Counter -->
+                <div class="performance-counter">
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="100">0</div>
+                        <div class="counter-label">FPS YOLOv12</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="2">0</div>
+                        <div class="counter-label">< Watts Power</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="6">0</div>
+                        <div class="counter-label">TOPS Performance</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="100">0</div>
+                        <div class="counter-label">% Privacy</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn btn-primary">See Live Demo</a>
+                    <a href="#contact" class="btn btn-secondary">Get Beta Access</a>
+                </div>
+
+                <!-- Trust Band -->
+                <div class="trust-band">
+                    <p>Trusted by aerospace leaders, robotics innovators, and edge AI pioneers</p>
+                    <div class="trust-logos">
+                        <div class="trust-logo">IIT</div>
+                        <div class="trust-logo">Aerospace</div>
+                        <div class="trust-logo">Robotics</div>
+                        <div class="trust-logo">AgriTech</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="processor-animation">
+                    <div class="chip-container">
+                        <div class="chip">
+                            <div class="chip-core">K3M-1</div>
+                            <div class="data-flow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="problem-solution">
+        <div class="container">
+            <h2 class="section-title">The Edge AI Gap</h2>
+            <div class="split-comparison">
+                <div class="comparison-side problem">
+                    <h3>Traditional Approach</h3>
+                    <ul class="problem-list">
+                        <li><i class="fas fa-times-circle"></i> 62% avoid GenAI due to privacy concerns</li>
+                        <li><i class="fas fa-times-circle"></i> Edge chips can't run modern transformers</li>
+                        <li><i class="fas fa-times-circle"></i> GPUs consume 200-300W</li>
+                        <li><i class="fas fa-times-circle"></i> Cloud dependency = security risk</li>
+                    </ul>
+                </div>
+                <div class="comparison-side solution">
+                    <h3>K3strelMark Solution</h3>
+                    <ul class="solution-list">
+                        <li><i class="fas fa-check-circle"></i> 100% on-device privacy by design</li>
+                        <li><i class="fas fa-check-circle"></i> Native transformer & LLM support</li>
+                        <li><i class="fas fa-check-circle"></i> Ultra-low power <2W operation</li>
+                        <li><i class="fas fa-check-circle"></i> Zero internet dependency</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="solution-preview">
+                <h3>K3M-1 Processor IP + SDK = Modern AI in MCU-class power</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Matrix -->
+    <section class="competitive-matrix">
+        <div class="container">
+            <h2 class="section-title">Why K3strelMark Leads Edge AI</h2>
+            <div class="matrix-table-container">
+                <div class="table-scroll">
+                    <table class="matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Jetson Nano</th>
+                                <th>Hailo-8/15</th>
+                                <th>Coral TPU</th>
+                                <th>SiMa.ai</th>
+                                <th class="highlight-col">K3strelMark</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>YOLOv12 Support</strong></td>
+                                <td>✓ (25 FPS @ 7-10W)</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td class="highlight-cell"><strong>✓ (100 FPS @ <2W)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vision Transformers</strong></td>
+                                <td>Partial</td>
+                                <td>✓ (ViT, DETR, CLIP)</td>
+                                <td>❌</td>
+                                <td>Limited</td>
+                                <td class="highlight-cell"><strong>✓ Full + Advanced</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>LLM/GenAI Support</strong></td>
+                                <td>Partial</td>
+                                <td>✓ (Hailo-15)</td>
+                                <td>❌</td>
+                                <td>Limited</td>
+                                <td class="highlight-cell"><strong>✓ Complete</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Multi-Framework</strong></td>
+                                <td>CUDA Only</td>
+                                <td>Model Zoo</td>
+                                <td>TF-Lite Only</td>
+                                <td>Proprietary</td>
+                                <td class="highlight-cell"><strong>PyTorch/ONNX/TVM</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Power Efficiency</strong></td>
+                                <td>7-10W</td>
+                                <td>2.5W</td>
+                                <td>~2W</td>
+                                <td>~4-10W</td>
+                                <td class="highlight-cell"><strong><2W</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Developer Freedom</strong></td>
+                                <td>Complex</td>
+                                <td>Pre-compiled</td>
+                                <td>Basic</td>
+                                <td>Good</td>
+                                <td class="highlight-cell"><strong>Complete</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <h2 class="section-title">The Complete AI Edge Solution</h2>
+            <div class="tech-overview">
+                <p class="tech-intro">K3strelMark delivers the industry's first complete hardware-software stack designed specifically for edge AI, combining custom RISC-V architecture with proprietary AI acceleration.</p>
+            </div>
+            
+            <div class="tech-stack">
+                <div class="tech-layer fade-in">
+                    <div class="layer-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Hardware Layer</h3>
+                    <p class="layer-subtitle">K3M-1 Processor IP</p>
+                    <ul>
+                        <li><strong>Custom RISC-V architecture</strong> with AI extensions</li>
+                        <li><strong>Proprietary AI instructions</strong> for advanced computations</li>
+                        <li><strong>On-processor data flow</strong> - no external transfers</li>
+                        <li><strong>Multi-precision support</strong> INT8/4/2 modes</li>
+                        <li><strong>Power optimization</strong> dedicated instructions</li>
+                    </ul>
+                    <div class="tech-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">6 TOPS</span>
+                            <span class="spec-label">Performance</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value"><2W</span>
+                            <span class="spec-label">Power</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-layer fade-in">
+                    <div class="layer-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software Layer</h3>
+                    <p class="layer-subtitle">K3M-1 SDK</p>
+                    <ul>
+                        <li><strong>Multi-framework compiler</strong> PyTorch, ONNX, TVM</li>
+                        <li><strong>Model optimization tools</strong> for edge deployment</li>
+                        <li><strong>Runtime environment</strong> with debugging support</li>
+                        <li><strong>Cross-platform compatibility</strong> seamless integration</li>
+                        <li><strong>Developer-friendly APIs</strong> comprehensive documentation</li>
+                    </ul>
+                    <div class="tech-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">4</span>
+                            <span class="spec-label">Frameworks</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value">All</span>
+                            <span class="spec-label">AI Models</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-layer fade-in">
+                    <div class="layer-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Integration Layer</h3>
+                    <p class="layer-subtitle">Complete Solution</p>
+                    <ul>
+                        <li><strong>OEM licensing options</strong> flexible business models</li>
+                        <li><strong>Custom IC design services</strong> on-demand support</li>
+                        <li><strong>Reference implementations</strong> proven use cases</li>
+                        <li><strong>Technical support tiers</strong> comprehensive assistance</li>
+                        <li><strong>Hardware-software co-design</strong> optimized performance</li>
+                    </ul>
+                    <div class="tech-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">24/7</span>
+                            <span class="spec-label">Support</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value">Custom</span>
+                            <span class="spec-label">Solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Deep Dive -->
+            <div class="tech-deep-dive">
+                <h3>Technical Architecture</h3>
+                <div class="architecture-grid">
+                    <div class="arch-card">
+                        <h4>RISC-V Core</h4>
+                        <p>Enhanced instruction set with custom AI operations optimized for modern neural network architectures including transformers.</p>
+                        <div class="arch-features">
+                            <span class="feature-tag">Custom Instructions</span>
+                            <span class="feature-tag">AI Acceleration</span>
+                            <span class="feature-tag">Custom ALU</span>
+                        </div>
+                    </div>
+                    <div class="arch-card">
+                        <h4>Memory Architecture</h4>
+                        <p>Optimized data flow with on-chip memory hierarchy designed for AI workloads and minimal power consumption.</p>
+                        <div class="arch-features">
+                            <span class="feature-tag">On-Chip Cache</span>
+                            <span class="feature-tag">DMA Controllers</span>
+                            <span class="feature-tag">Data Locality</span>
+                        </div>
+                    </div>
+                    <div class="arch-card">
+                        <h4>AI Accelerators</h4>
+                        <p>Dedicated hardware units for convolution, attention, and normalization operations with multi-precision support.</p>
+                        <div class="arch-features">
+                            <span class="feature-tag">Conv Engines</span>
+                            <span class="feature-tag">Attention Units</span>
+                            <span class="feature-tag">Quantization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="performance">
+        <div class="container">
+            <h2 class="section-title">Benchmarks That Matter</h2>
+            <p class="section-subtitle">Real-world performance metrics from our FPGA implementation, validated across multiple AI models and use cases.</p>
+            
+            <!-- Performance Grid -->
+            <div class="performance-grid">
+                <div class="performance-card">
+                    <h3>Vision AI Leadership</h3>
+                    <p class="card-subtitle">Industry-leading FPS for computer vision models</p>
+                    <div class="benchmark-chart">
+                        <div class="benchmark-item">
+                            <div class="benchmark-header">
+                                <span class="model-name">YOLOv12 (320×320)</span>
+                                <span class="fps-value primary">100 FPS</span>
+                            </div>
+                            <div class="benchmark-comparison">
+    <div class="benchmark-bar">
+        <div class="bar yolo12"></div>
     </div>
-  </div>
-</nav>
-
-
-<!-- Hero Section -->
-<section id="hero" class="hero text-center">
-  <div class="container">
-    <h1 class="display-4 fw-bold">Edge AI. Reimagined with RISC‑V.</h1>
-    <p class="fs-5 mt-3">
-      K3strelMark's K3M-1 is a 6-TOPS single-core processor running GenAI models—<br>
-      with <strong>real-time performance</strong>, <strong>zero cloud dependency</strong>, and <strong>full on-device privacy</strong>.
-    </p>
-    <a href="#contact" class="btn btn-light btn-lg mt-4 shadow">Become a Partner</a>
-  </div>
-</section>
-
-<!-- About Us -->
-<section id="about-us" class="about-us text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">About K3strelMark</h2>
-    <p class="lead">Founded to democratize AI at the edge, K3strelMark develops RISC-V based processors and SDKs that enable transformative on-device intelligence everywhere—efficiently, privately, and securely. Our mission: make true AI accessible to all devices, free from cloud dependency and vendor lock-in.</p>
-  </div>
-</section>
-
-<!-- Our Story -->
-<section id="story" class="story text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">Our Story</h2>
-    <p>It started with a vision: to give every device—no matter how small—the power to think. Not satisfied with power-hungry or inflexible solutions, our founders combined expertise in hardware, AI, and design to create K3M-1: a RISC-V processor that sets a new bar for edge AI. Today, we’re collaborating with real partners in robotics, health, and security.</p>
-  </div>
-</section>
-
-<!-- The Company -->
-<section id="company" class="company text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">The Company</h2>
-    <p>K3strelMark is a deep-tech startup building the future of privacy-aware, on-device AI. Backed by expertise in RISC-V and embedded AI, we work with early partners across robotics, automotive, and security. Our roadmap: validate on FPGA, develop ASIC silicon, and scale globally with a partner-first mindset.</p>
-  </div>
-</section>
-
-<!-- What Is / Product -->
-<section id="about" class="about text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">What We Built</h2>
-    <p class="lead">K3M-1 is a <strong>RISC-V AI processor</strong> that delivers <strong>real embedded AI</strong>.</p>
-    <ul class="list-unstyled fs-5 mt-3">
-      <li>✅ 6-TOPS performance — optimized for <strong>Transformers, CV, and GenAI</strong></li>
-      <li>✅ Built using Xilinx FPGA, delivering <strong>100 FPS on YOLOv12 @ 320×320</strong></li>
-      <li>✅ Architected for <strong>ultra-low power</strong>, sub-mW idle, and <strong>edge-first privacy</strong></li>
-      <li>✅ No cloud. No GPUs. No fixed-function accelerators.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Features / Why Us -->
-<section id="features" class="features text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">Why K3strelMark?</h2>
-    <div class="row">
-      <div class="col-md-3"><h5>⚡ Ultra-Low Power</h5><p>AI for always-on edge use cases without heat or battery drain.</p></div>
-      <div class="col-md-3"><h5>🔓 RISC-V + Open IP</h5><p>No vendor lock-in—fully extensible infrastructure.</p></div>
-      <div class="col-md-3"><h5>🧠 Any Model Ready</h5><p>No hardcoding. Use our SDK to plug in your own AI easily.</p></div>
-      <div class="col-md-3"><h5>🛡️ GDPR-First</h5><p>Privacy-by-design: data stays entirely on-device.</p></div>
+                                <span class="comparison-note">4x faster than Jetson Nano (25 FPS)</span>
+                            </div>
+                        </div>
+                        <div class="benchmark-item">
+                            <div class="benchmark-header">
+                                <span class="model-name">YOLOv5 (640×640)</span>
+                                <span class="fps-value primary">160 FPS</span>
+                            </div>
+                            <div class="benchmark-comparison">
+    <div class="benchmark-bar">
+        <div class="bar yolo5"></div>
     </div>
-  </div>
-</section>
-
-<!-- Team -->
-<section id="team" class="team text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">Meet the Team</h2>
-    <div class="row align-items-center">
-      <div class="col-md-4">
-        <img src="karthy.jpg" class="rounded-circle mb-2" height="88" width="88" alt="Karthy, CTO" />
-        <h5>Karthy</h5>
-        <p>CTO & Co-founder<br>Surgical robotics, HW/SW codesign, PhD, 11 years experience</p>
-      </div>
-      <div class="col-md-4">
-        <img src="milind.jpg" class="rounded-circle mb-2" height="88" width="88" alt="Milind, CAIO" />
-        <h5>Milind</h5>
-        <p>Chief AI Officer<br>17 years in computer vision & AI, PhD</p>
-      </div>
-      <div class="col-md-4">
-        <img src="eleonora.jpg" class="rounded-circle mb-2" height="88" width="88" alt="Eleonora, CEO" />
-        <h5>Eleonora</h5>
-        <p>CEO & Co-founder<br>Serial founder, sales & negotiation expert</p>
-      </div>
+                                <span class="comparison-note">Full resolution real-time detection</span>
+                            </div>
+                        </div>
+                        <div class="benchmark-item">
+                            <div class="benchmark-header">
+                                <span class="model-name">MobileNetV2 (224×224)</span>
+                                <span class="fps-value primary">500 FPS</span>
+                            </div>
+                            <div class="benchmark-comparison">
+    <div class="benchmark-bar">
+        <div class="bar mobilenet"></div>
     </div>
-  </div>
-</section>
+                                <span class="comparison-note">Ultra-fast edge classification</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Who We're Looking For -->
-<section id="partners" class="dark-section text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">We’re Looking For</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <h5>🔬 Deep Tech Collaborators</h5>
-        <p>Help us validate K3M-1 with cutting-edge R&D. Ideal for labs and universities.</p>
-      </div>
-      <div class="col-md-4">
-        <h5>🤖 Product Testers</h5>
-        <p>OEMs in robotics, vision, IoT, surveillance—run GenAI locally with zero latency.</p>
-      </div>
-      <div class="col-md-4">
-        <h5>💼 Strategic Investors</h5>
-        <p>Join the next AI hardware wave. Help us tape-out silicon and scale manufacturing.</p>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="performance-card">
+                    <h3>Power Efficiency</h3>
+                    <p class="card-subtitle">Best-in-class performance per watt</p>
+                    <div class="power-comparison">
+                        <div class="power-item">
+                            <div class="power-info">
+                                <span class="device">K3strelMark</span>
+                                <span class="power-value primary"><2W</span>
+                            </div>
+                            <div class="power-bar k3m" style="width: 20%;"></div>
+                        </div>
+                        <div class="power-item">
+                            <div class="power-info">
+                                <span class="device">Hailo-8</span>
+                                <span class="power-value">2.5W</span>
+                            </div>
+                            <div class="power-bar hailo" style="width: 25%;"></div>
+                        </div>
+                        <div class="power-item">
+                            <div class="power-info">
+                                <span class="device">Jetson Nano</span>
+                                <span class="power-value">7-10W</span>
+                            </div>
+                            <div class="power-bar jetson" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="efficiency-metrics">
+                        <div class="metric">
+                            <span class="metric-value">50</span>
+                            <span class="metric-label">FPS/Watt</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">3</span>
+                            <span class="metric-label">TOPS/Watt</span>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Traction / Roadmap -->
-<section id="traction" class="traction text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">What We’ve Achieved</h2>
-    <ul class="list-unstyled fs-5">
-      <li>✅ FPGA prototype live on Xilinx Zynq</li>
-      <li>✅ 20+ early partners in robotics, imaging, and security</li>
-      <li>🎯 Target: TRL7 on FPGA → Silicon tape-out post fundraising</li>
-      <li>📈 Roadmap: validate (2025–26) → raise + tape-out (2026–28) → expand (2028+)</li>
-    </ul>
-  </div>
-</section>
+                <div class="performance-card">
+                    <h3>Model Support</h3>
+                    <p class="card-subtitle">Comprehensive AI model compatibility</p>
+                    <div class="model-support">
+                        <div class="support-category">
+                            <h4>Computer Vision</h4>
+                            <div class="support-items">
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>All YOLO variants (v5-v12)</span>
+                                </div>
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>ResNet, EfficientNet, MobileNet</span>
+                                </div>
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Vision Transformers (ViT)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="support-category">
+                            <h4>Advanced AI</h4>
+                            <div class="support-items">
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Transformer architectures</span>
+                                </div>
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Advanced neural networks</span>
+                                </div>
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Custom model optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- Contact -->
-<section id="contact" class="contact text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">Join the Early Access Program</h2>
-    <p class="fs-5">Get access to the K3M-1 SDK, benchmark kits, and work directly with our engineering team.</p>
-    <form class="mt-4" style="max-width: 500px; margin: auto;">
-      <input type="text" class="form-control mb-3" placeholder="Your Name" required>
-      <input type="email" class="form-control mb-3" placeholder="Your Email" required>
-      <textarea class="form-control mb-3" rows="3" placeholder="Tell us briefly about your use case or company"></textarea>
-      <button type="submit" class="btn btn-dark btn-lg w-100">Apply Now</button>
-    </form>
-  </div>
-</section>
+            <!-- Performance Highlights -->
+            <div class="performance-highlights">
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>4x Faster</h4>
+                        <p>Than comparable edge solutions for YOLOv12</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-battery-half"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>5x More Efficient</h4>
+                        <p>Better performance per watt than Jetson</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>100% Private</h4>
+                        <p>All processing happens on-device</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Footer -->
-<footer class="py-4 bg-dark text-light text-center">
-  <div class="container">
-    <small>AI everywhere. Control in your hands. <strong>K3strelMark – Intelligence Within</strong>. &copy; 2025</small>
-  </div>
-</footer>
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <h2 class="section-title">Intelligence Where It Matters</h2>
+            <p class="section-subtitle">Real-world applications across industries that demand edge AI performance, privacy, and reliability.</p>
+            
+            <div class="solutions-grid">
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Aerospace & Defense</h3>
+                    <p>Autonomous drones, secure communications, and mission-critical systems that operate without internet connectivity.</p>
+                    <div class="solution-stats">
+                        <span class="stat">Zero latency decisions</span>
+                        <span class="stat">Military-grade security</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Real-time object detection and tracking</li>
+                            <li>Autonomous navigation systems</li>
+                            <li>Secure communication protocols</li>
+                            <li>Environmental hazard detection</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">Schedule Defense Briefing</a>
+                </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>Private diagnostic devices, real-time medical imaging analysis with HIPAA compliance and patient data protection.</p>
+                    <div class="solution-stats">
+                        <span class="stat">HIPAA compliant</span>
+                        <span class="stat">Real-time diagnostics</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Medical image analysis</li>
+                            <li>Patient monitoring systems</li>
+                            <li>Portable diagnostic devices</li>
+                            <li>Privacy-preserving AI</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">Request Medical Demo</a>
+                </div>
+
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Industrial IoT</h3>
+                    <p>Predictive maintenance in harsh environments, quality control systems that operate reliably without cloud dependency.</p>
+                    <div class="solution-stats">
+                        <span class="stat">99.9% uptime</span>
+                        <span class="stat">Edge processing</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Predictive maintenance</li>
+                            <li>Quality control inspection</li>
+                            <li>Anomaly detection</li>
+                            <li>Process optimization</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">Pilot Program Application</a>
+                </div>
+
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Robotics</h3>
+                    <p>Autonomous navigation, human-robot interaction, and real-time decision making with privacy-preserving AI processing.</p>
+                    <div class="solution-stats">
+                        <span class="stat">Real-time decisions</span>
+                        <span class="stat">Ultra-low power</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Autonomous navigation</li>
+                            <li>Object manipulation</li>
+                            <li>Human-robot interaction</li>
+                            <li>Environment mapping</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">Robotics Integration</a>
+                </div>
+
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Agriculture</h3>
+                    <p>Precision farming, crop monitoring, and agricultural automation in remote locations without reliable internet connectivity.</p>
+                    <div class="solution-stats">
+                        <span class="stat">Offline operation</span>
+                        <span class="stat">Weather resistant</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Crop health monitoring</li>
+                            <li>Pest detection</li>
+                            <li>Yield optimization</li>
+                            <li>Autonomous farming equipment</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">AgriTech Demo</a>
+                </div>
+
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>Smart Cities</h3>
+                    <p>Traffic optimization, security systems, and urban infrastructure monitoring with GDPR-compliant privacy protection.</p>
+                    <div class="solution-stats">
+                        <span class="stat">GDPR compliant</span>
+                        <span class="stat">City-scale deployment</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Traffic flow optimization</li>
+                            <li>Public safety monitoring</li>
+                            <li>Infrastructure inspection</li>
+                            <li>Environmental monitoring</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">Smart City Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Where Scientific Excellence Meets Commercial Vision</h2>
+            <p class="section-subtitle">A world-class team combining deep technical expertise with proven commercial success, backed by renowned advisors and research institutions.</p>
+            
+            <!-- Team Profiles -->
+            <div class="team-grid">
+                <div class="team-member slide-in-left">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Karthikeyan Kalyanasundaram</h3>
+                        <p class="member-title">CTO & Co-Founder</p>
+                        <p class="member-credentials">PhD in Surgical Robotics • 11 years HW/SW co-design • 2 patents</p>
+                        <div class="member-details">
+                            <p>Hardware-software integration expert with deep experience in RISC-V, PyTorch, and Verilog. Since 2019, researcher at Istituto Italiano di Tecnologia (IIT) in Genova, Italy. Leading the development of cutting-edge AI solutions optimized for embedded platforms.</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">RISC-V Architecture</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">Verilog HDL</span>
+                                <span class="skill-tag">Hardware-Software Co-design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member slide-in-left">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Eleonora Servodio</h3>
+                        <p class="member-title">CEO & Co-Founder</p>
+                        <p class="member-credentials">Former Amazon VM • 2nd-time founder • MBA Bocconi</p>
+                        <div class="member-details">
+                            <p>Technology transfer and startup incubation expert managing the incubator at IIT. Former Amazon Vendor Manager who negotiated with 100+ companies and launched new product categories. Currently operating successful e-commerce business.</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Business Development</span>
+                                <span class="skill-tag">Technology Transfer</span>
+                                <span class="skill-tag">Startup Incubation</span>
+                                <span class="skill-tag">Strategic Partnerships</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member slide-in-left">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Undisclosed</h3>
+                        <p class="member-title">Chief AI Officer & Co-Founder</p>
+                        <!-- <p>Available to Qualified Investors</p> -->
+                        <p class="member-credentials">PhD Computer Vision • 17 years AI/ML • Published author</p>
+                        <div class="member-details">
+                            <p>Senior researcher with extensive industrial background at leading technology institutes. Expert in real-time AI applications with proven track record in computer vision and autonomous systems development. Available for direct discussions with qualified investors and serious partners.</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">Deep Learning</span>
+                                <span class="skill-tag">Image Processing</span>
+                                <span class="skill-tag">Real-time AI</span>
+                            </div>
+                            <!--
+                            <div class="contact-note">
+                                <p><em>Direct contact available through: <a href="mailto:info@k3strelmark.com">info@k3strelmark.com</a></em></p>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advisors -->
+            <div class="advisors-section">
+                <h3>Advisors & Mentors</h3>
+                <div class="advisors-grid">
+                    <div class="advisor fade-in">
+                        <div class="advisor-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h4>Marco Crepaldi</h4>
+                        <p class="advisor-title">Scientific Advisor</p>
+                        <p>Electronic Design Lab Coordinator at IIT, expert in analog and digital circuit design for AI applications.</p>
+                    </div>
+                    <div class="advisor fade-in">
+                        <div class="advisor-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Nadia Fabrizio</h4>
+                        <p class="advisor-title">Technology Transfer Expert</p>
+                        <p>Technology Transfer specialist at University of Bergamo with extensive experience in commercializing deep-tech innovations.</p>
+                    </div>
+                    <div class="advisor fade-in">
+                        <div class="advisor-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Filippo Satolli</h4>
+                        <p class="advisor-title">Startup Mentor</p>
+                        <p>CEO at Startup Italia with deep expertise in scaling tech startups and go-to-market strategies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traction -->
+            <div class="traction-section">
+                <h3>Current Traction</h3>
+                <div class="traction-grid">
+                    <div class="traction-item">
+                        <div class="traction-number">4</div>
+                        <div class="traction-label">Companies Testing Solutions</div>
+                        <div class="traction-detail">2 aerospace, 1 agritech, 1 robotics</div>
+                    </div>
+                    <div class="traction-item">
+                        <div class="traction-number">1</div>
+                        <div class="traction-label">Investor Soft Commitment</div>
+                        <div class="traction-detail">For internal POC at IIT lab</div>
+                    </div>
+                    <div class="traction-item">
+                        <div class="traction-number">TRL5</div>
+                        <div class="traction-label">Technology Readiness</div>
+                        <div class="traction-detail">Functional HW-SW system on FPGA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Model Section -->
+    <section id="business" class="business-model">
+        <div class="container">
+            <h2 class="section-title">Flexible Business Models for Every Need</h2>
+            <p class="section-subtitle">From startups to enterprise deployments, we offer licensing options that scale with your business requirements.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="card-header">
+                        <h3>IP License</h3>
+                        <p class="price">One-time fee</p>
+                        <p class="price-subtitle">Perfect for new product development</p>
+                    </div>
+                    <div class="card-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Complete processor IP</li>
+                            <li><i class="fas fa-check"></i> Encrypted Verilog source code</li>
+                            <li><i class="fas fa-check"></i> Technical documentation</li>
+                            <li><i class="fas fa-check"></i> Integration support</li>
+                            <li><i class="fas fa-check"></i> Custom IC design services</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-outline btn-full">Get Quote</a>
+                </div>
+
+                <div class="pricing-card featured fade-in">
+                    <div class="card-badge">Most Popular</div>
+                    <div class="card-header">
+                        <h3>Royalty Model</h3>
+                        <p class="price">Per-unit fees</p>
+                        <p class="price-subtitle">Ideal for volume production</p>
+                    </div>
+                    <div class="card-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Volume production licensing</li>
+                            <li><i class="fas fa-check"></i> Scalable pricing structure</li>
+                            <li><i class="fas fa-check"></i> Ongoing technical support</li>
+                            <li><i class="fas fa-check"></i> Software updates access</li>
+                            <li><i class="fas fa-check"></i> Priority partnership status</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-primary btn-full">Start Partnership</a>
+                </div>
+
+                <div class="pricing-card fade-in">
+                    <div class="card-header">
+                        <h3>SDK Freemium</h3>
+                        <p class="price">Free + Premium</p>
+                        <p class="price-subtitle">Developer-friendly approach</p>
+                    </div>
+                    <div class="card-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Open community version</li>
+                            <li><i class="fas fa-check"></i> Premium developer tools</li>
+                            <li><i class="fas fa-check"></i> Priority technical support</li>
+                            <li><i class="fas fa-check"></i> Custom integrations</li>
+                            <li><i class="fas fa-check"></i> Cloud deployment tools</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-outline btn-full">Download SDK</a>
+                </div>
+            </div>
+
+            <!-- Market Information -->
+            <div class="market-info">
+                <h3>Market Opportunity</h3>
+                <div class="market-stats">
+                    <div class="market-stat">
+                        <div class="stat-value">€130B</div>
+                        <div class="stat-label">Global Edge AI Market by 2034</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-value">€45B</div>
+                        <div class="stat-label">European Edge AI Market by 2034</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-value">€100M</div>
+                        <div class="stat-label">Our Target SOM in 5 Years</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-value">22.2%</div>
+                        <div class="stat-label">10-Year CAGR</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Funding Information -->
+            <div class="funding-info">
+                <h3>Funding Strategy</h3>
+                <div class="funding-phases">
+                    <div class="phase-card">
+                        <h4>Phase 1: Validation (2025-2026)</h4>
+                        <div class="phase-details">
+                            <div class="funding-amount">€3M</div>
+                            <div class="funding-use">
+                                <p><strong>Focus:</strong> TRL 5 → TRL 7</p>
+                                <ul>
+                                    <li>Technology validation with 20 partners</li>
+                                    <li>Team expansion (technical hires)</li>
+                                    <li>FPGA product development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phase-card">
+                        <h4>Phase 2: Silicon (2026-2028)</h4>
+                        <div class="phase-details">
+                            <div class="funding-amount">€20M</div>
+                            <div class="funding-use">
+                                <p><strong>Focus:</strong> TRL 7 → TRL 8</p>
+                                <ul>
+                                    <li>ASIC development with academia</li>
+                                    <li>Foundry partnerships</li>
+                                    <li>Chip design team expansion</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phase-card">
+                        <h4>Phase 3: Scale (2028+)</h4>
+                        <div class="phase-details">
+                            <div class="funding-amount">€20M</div>
+                            <div class="funding-use">
+                                <p><strong>Focus:</strong> TRL 8 → TRL 9</p>
+                                <ul>
+                                    <li>Global go-to-market</li>
+                                    <li>Tier 1 partnerships</li>
+                                    <li>Sales & support scaling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Transform Your Edge AI?</h2>
+            <p class="section-subtitle">Whether you're an engineer, business leader, or potential partner—let's discuss how K3strelMark can accelerate your AI initiatives.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's discuss your needs</h3>
+                    <p>We work with companies across industries to integrate advanced AI capabilities at the edge. From proof-of-concept to production deployment, our team provides comprehensive support.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>General Inquiries</h4>
+                                <p>info@k3strelmark.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Direct Contact</h4>
+                                <p>+39 347 732 7645</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Istituto Italiano di Tecnologia<br>Genova, Italy</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-linkedin"></i>
+                            <div>
+                                <h4>Connect with Team</h4>
+                                <p>Follow our founders on LinkedIn</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="beta-program">
+                        <h4>Join Our Beta Program</h4>
+                        <p>Get early access to K3strelMark technology and work directly with our engineering team to optimize performance for your use case.</p>
+                        <div class="beta-benefits">
+                            <span class="benefit-tag">Early Access</span>
+                            <span class="benefit-tag">Technical Support</span>
+                            <span class="benefit-tag">Custom Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="audience">I am a:</label>
+                        <select id="audience" name="audience" required>
+                            <option value="">Select your role</option>
+                            <option value="engineer">Engineer/Developer</option>
+                            <option value="business">Business Leader/CTO</option>
+                            <option value="partner">Potential Partner/OEM</option>
+                            <option value="investor">Investor</option>
+                            <option value="media">Media/Press</option>
+                            <option value="academic">Academic/Researcher</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" placeholder="Company Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="industry" name="industry" placeholder="Industry">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell us about your project, use case, or questions..." rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="beta" name="beta">
+                            <span class="checkmark"></span>
+                            I'm interested in joining the beta program
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">K<span class="logo-accent">3</span>strelMark</span>
+                        <span class="tagline">Intelligence Within</span>
+                    </div>
+                    <p>Redefining where and how AI works by changing hardware architecture at its core. Bringing intelligence to every device with privacy, efficiency, and performance.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Technology</h4>
+                        <ul>
+                            <li><a href="#technology">K3M-1 Processor</a></li>
+                            <li><a href="#technology">SDK & Tools</a></li>
+                            <li><a href="#performance">Benchmarks</a></li>
+                            <li><a href="#technology">Technical Docs</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Solutions</h4>
+                        <ul>
+                            <li><a href="#solutions">Aerospace & Defense</a></li>
+                            <li><a href="#solutions">Healthcare</a></li>
+                            <li><a href="#solutions">Industrial IoT</a></li>
+                            <li><a href="#solutions">Robotics</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#team">About Us</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#business">Business Model</a></li>
+                            <li><a href="#contact">Careers</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#contact">Beta Program</a></li>
+                            <li><a href="#contact">Downloads</a></li>
+                            <li><a href="#contact">Support</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 K3strelMark. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
