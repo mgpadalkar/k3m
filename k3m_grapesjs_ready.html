@@ -1,0 +1,3193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K3strelMark - Edge AI Revolution</title>
+
+    <!-- External fonts - keeping these for proper rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #156082;
+    --secondary-color: #E71C73;
+    --accent-color: #00D4AA;
+    --dark-color: #1a1a1a;
+    --light-color: #ffffff;
+    --gray-light: #f8f9fa;
+    --gray-medium: #6c757d;
+    --gradient-primary: linear-gradient(135deg, #156082 0%, #00D4AA 100%);
+    --gradient-secondary: linear-gradient(135deg, #E71C73 0%, #FF6B6B 100%);
+    --shadow-light: 0 2px 20px rgba(0,0,0,0.1);
+    --shadow-medium: 0 8px 40px rgba(0,0,0,0.15);
+    --border-radius: 12px;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--dark-color);
+    background: var(--gray-light);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.logo-accent {
+    color: var(--primary-color);
+}
+
+.tagline {
+    font-size: 12px;
+    color: var(--gray-medium);
+    font-weight: 400;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.nav-cta {
+    background: var(--gradient-primary) !important;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+}
+
+.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--dark-color);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding-top: 70px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-content {
+    /* Add this for proper content organization */
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-medium);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.performance-counter {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.counter-item {
+    text-align: center;
+}
+
+.counter-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+}
+
+.counter-label {
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+    margin-top: 0.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.trust-band {
+    text-align: center;
+}
+
+.trust-band p {
+    color: var(--gray-medium);
+    margin-bottom: 1rem;
+}
+
+.trust-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.trust-logo {
+    padding: 0.5rem 1rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    font-weight: 600;
+}
+
+/* Hero Visual */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.processor-animation {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.chip-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: float 3s ease-in-out infinite;
+}
+
+.chip {
+    width: 200px;
+    height: 200px;
+    background: var(--gradient-primary);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 50px auto;
+    box-shadow: var(--shadow-medium);
+}
+
+.chip-core {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.data-flow {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 25px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* Section Styles */
+section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-color);
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--gray-medium);
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Problem Solution */
+.problem-solution {
+    background: white;
+}
+
+.split-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.comparison-side {
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.comparison-side h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.problem {
+    background: #fff5f5;
+    border-left: 4px solid #e53e3e;
+}
+
+.solution {
+    background: #f0fff4;
+    border-left: 4px solid #38a169;
+}
+
+.problem-list, .solution-list {
+    list-style: none;
+}
+
+.problem-list li,
+.solution-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.problem-list i {
+    color: #e53e3e;
+}
+
+.solution-list i {
+    color: #38a169;
+}
+
+.solution-preview {
+    text-align: center;
+    padding: 2rem;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: var(--border-radius);
+}
+
+.solution-preview h3 {
+    font-size: 1.5rem;
+}
+
+/* Competitive Matrix */
+.competitive-matrix {
+    background: var(--gray-light);
+}
+
+.matrix-table-container {
+    overflow-x: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+.matrix-table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+}
+
+.matrix-table th,
+.matrix-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.matrix-table th {
+    background: var(--gray-light);
+    font-weight: 600;
+    color: var(--dark-color);
+    border-bottom: 2px solid #e9ecef;
+}
+
+.highlight-col {
+    background: var(--gradient-primary) !important;
+    color: white;
+}
+
+.highlight-cell {
+    background: linear-gradient(135deg, rgba(21, 96, 130, 0.1), rgba(0, 212, 170, 0.1));
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Technology Stack */
+.technology {
+    background: white;
+}
+
+.tech-overview {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.tech-intro {
+    font-size: 1.125rem;
+    color: var(--gray-medium);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.tech-layer {
+    background: var(--gray-light);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease;
+}
+
+.tech-layer:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.layer-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.layer-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.tech-layer h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.layer-subtitle {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.tech-layer ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.tech-layer li {
+    margin-bottom: 0.5rem;
+    color: var(--gray-medium);
+}
+
+.tech-specs {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.spec-item {
+    text-align: center;
+}
+
+.spec-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.spec-label {
+    font-size: 0.875rem;
+    color: var(--gray-medium);
+    font-weight: 500;
+}
+
+.tech-deep-dive {
+    margin-top: 4rem;
+}
+
+.tech-deep-dive h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+}
+
+.architecture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.arch-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #e9ecef;
+    box-shadow: var(--shadow-light);
+}
+
+.arch-card h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.arch-card p {
+    color: var(--gray-medium);
+    margin-bottom: 1.5rem;
+}
+
+.arch-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.feature-tag {
+    background: var(--gray-light);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #e9ecef;
+}
+
+/* Performance Section */
+.performance {
+    background: var(--gray-light);
+}
+
+.performance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.performance-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    border: 1px solid #e9ecef;
+}
+
+.performance-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.card-subtitle {
+    color: var(--gray-medium);
+    margin-bottom: 1.5rem;
+}
+
+.benchmark-chart {
+    margin-top: 1.5rem;
+}
+
+.benchmark-item {
+    margin-bottom: 1.5rem;
+}
+
+.benchmark-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--gray-light);
+    border-radius: var(--border-radius);
+    margin-bottom: 0.5rem;
+}
+
+.model-name {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.fps-value {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.fps-value.primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* FIXED: Added proper benchmark progress bars */
+.benchmark-comparison {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.benchmark-bar {
+    background: #e9ecef;
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.bar {
+    height: 100%;
+    border-radius: 10px;
+    background: var(--gradient-primary);
+    transition: width 1s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.bar.yolo12 {
+    width: 20%;
+    background: var(--gradient-primary);
+}
+
+.bar.yolo5 {
+    width: 28%;
+    background: var(--gradient-primary);
+}
+
+.bar.mobilenet {
+    width: 100%;
+    background: var(--gradient-primary);
+}
+
+.comparison-note {
+    color: var(--gray-medium);
+    font-size: 0.875rem;
+    font-style: italic;
+    margin-top: 0.25rem;
+}
+
+.power-comparison {
+    margin: 1.5rem 0;
+}
+
+.power-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.power-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    margin-right: 1rem;
+}
+
+.device {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.power-value {
+    font-weight: 700;
+}
+
+.power-value.primary {
+    color: var(--primary-color);
+}
+
+.power-bar {
+    height: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.power-bar.k3m {
+    background: var(--gradient-primary);
+}
+
+.power-bar.hailo {
+    background: var(--secondary-color);
+}
+
+.power-bar.jetson {
+    background: #76c7c0;
+}
+
+.efficiency-metrics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.metric-label {
+    font-size: 0.875rem;
+    color: var(--gray-medium);
+    font-weight: 500;
+}
+
+.model-support {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.support-category h4 {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.support-items {
+    margin-bottom: 0.5rem;
+}
+
+.support-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.support-item i {
+    color: var(--accent-color);
+}
+
+.support-item span {
+    color: var(--gray-medium);
+    font-size: 0.875rem;
+}
+
+.performance-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    border: 1px solid #e9ecef;
+}
+
+.highlight-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.highlight-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.highlight-content h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.25rem;
+}
+
+.highlight-content p {
+    color: var(--gray-medium);
+    font-size: 0.875rem;
+}
+
+/* Solutions Grid */
+.solutions {
+    background: white;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.solution-card {
+    background: var(--gray-light);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.solution-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.solution-icon i {
+    color: white;
+    font-size: 2rem;
+}
+
+.solution-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.solution-card p {
+    color: var(--gray-medium);
+    margin-bottom: 1.5rem;
+}
+
+.solution-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.solution-features ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.solution-features li {
+    color: var(--gray-medium);
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.solution-features li::before {
+    content: '→';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.solution-cta {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.solution-cta:hover {
+    border-bottom-color: var(--primary-color);
+}
+
+/* Team Section */
+.team {
+    background: var(--gray-light);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.team-member {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    border: 1px solid #e9ecef;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.member-photo i {
+    font-size: 4rem;
+    color: white;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.member-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-credentials {
+    color: var(--gray-medium);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.member-details {
+    text-align: left;
+}
+
+.member-details p {
+    color: var(--gray-medium);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.member-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-tag {
+    background: var(--gray-light);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #e9ecef;
+}
+
+.contact-note {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.contact-note a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-note a:hover {
+    text-decoration: underline;
+}
+
+.advisors-section {
+    margin-top: 4rem;
+}
+
+.advisors-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+}
+
+.advisors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.advisor {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    border: 1px solid #e9ecef;
+}
+
+.advisor-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gray-light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
+}
+
+.advisor-icon i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.advisor h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.advisor-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.advisor p {
+    color: var(--gray-medium);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.traction-section {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: var(--shadow-light);
+}
+
+.traction-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+}
+
+.traction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.traction-item {
+    text-align: center;
+}
+
+.traction-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.traction-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.traction-detail {
+    font-size: 0.875rem;
+    color: var(--gray-medium);
+}
+
+/* Business Model */
+.business-model {
+    background: white;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.pricing-card {
+    background: var(--gray-light);
+    border-radius: var(--border-radius);
+    border: 2px solid #e9ecef;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.pricing-card.featured {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-light);
+}
+
+.card-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 0 0 0 var(--border-radius);
+}
+
+.card-header {
+    padding: 2rem;
+    text-align: center;
+    background: white;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.price-subtitle {
+    color: var(--gray-medium);
+    font-size: 0.875rem;
+}
+
+.card-features {
+    padding: 0 2rem 2rem;
+}
+
+.card-features ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.card-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--gray-medium);
+}
+
+.card-features i {
+    color: var(--accent-color);
+    font-size: 1.125rem;
+}
+
+.market-info {
+    margin: 4rem 0;
+    background: var(--gray-light);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+}
+
+.market-info h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+}
+
+.market-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.market-stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--gray-medium);
+    font-weight: 500;
+}
+
+.funding-info {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: var(--shadow-light);
+}
+
+.funding-info h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+}
+
+.funding-phases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.phase-card {
+    background: var(--gray-light);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    border: 1px solid #e9ecef;
+}
+
+.phase-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.phase-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.funding-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.funding-use p {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.funding-use ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    color: var(--gray-medium);
+}
+
+.funding-use li {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact {
+    background: var(--gray-light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.contact-info p {
+    color: var(--gray-medium);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.contact-methods {
+    margin-bottom: 3rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-method i {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.contact-method h4 {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.25rem;
+}
+
+.contact-method p {
+    color: var(--gray-medium);
+    margin: 0;
+}
+
+.beta-program {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    border: 1px solid #e9ecef;
+}
+
+.beta-program h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.beta-program p {
+    color: var(--gray-medium);
+    margin-bottom: 1.5rem;
+}
+
+.beta-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.benefit-tag {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.contact-form {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    border: 1px solid #e9ecef;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(21, 96, 130, 0.1);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    color: var(--gray-medium);
+    font-weight: normal;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 4rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: var(--primary-color);
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.footer-column h4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-legal a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: white;
+}
+
+/* Make footer logo and tagline white for visibility */
+.footer .logo-text,
+.footer .logo-accent,
+.footer .tagline {
+    color: #fff !important;
+}
+
+.footer .logo-text,
+.footer .tagline {
+    color: #fff !important;
+}
+.footer .logo-accent {
+    color: var(--primary-color) !important;
+}
+
+
+
+/* Animation Classes */
+.fade-in {
+    
+    
+    transition: all 0.8s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    
+}
+
+.slide-in-left {
+    
+    
+    transition: all 0.8s ease;
+}
+
+.slide-in-left.active {
+    opacity: 1;
+    
+}
+
+.slide-in-right {
+    
+    
+    transition: all 0.8s ease;
+}
+
+.slide-in-right.active {
+    opacity: 1;
+    
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .performance-counter {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .split-comparison {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero-container {
+        padding: 6rem 1rem 2rem;
+    }
+    
+    .performance-counter {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tech-stack,
+    .performance-grid,
+    .solutions-grid,
+    .team-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .market-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .funding-phases {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .market-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .trust-logos {
+        justify-content: center;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .contact {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .section-title {
+        page-break-after: avoid;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">K<span class="logo-accent">3</span>strelMark</span>
+                <span class="tagline">Intelligence Within</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#business">Business</a></li>
+                <li><a href="#contact" class="nav-cta">Get Beta Access</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    AI. <span class="gradient-text">Unplugged</span>. Private. Real-Time.
+                </h1>
+                <p class="hero-subtitle">
+                    The first processor that runs transformers and LLMs directly on your device—no cloud, no internet, no compromise.
+                </p>
+                
+                <!-- Performance Counter -->
+                <div class="performance-counter">
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="100">0</div>
+                        <div class="counter-label">FPS YOLOv12</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="2">0</div>
+                        <div class="counter-label">< Watts Power</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="6">0</div>
+                        <div class="counter-label">TOPS Performance</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="100">0</div>
+                        <div class="counter-label">% Privacy</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn btn-primary">See Live Demo</a>
+                    <a href="#contact" class="btn btn-secondary">Get Beta Access</a>
+                </div>
+
+                <!-- Trust Band -->
+                <div class="trust-band">
+                    <p>Trusted by aerospace leaders, robotics innovators, and edge AI pioneers</p>
+                    <div class="trust-logos">
+                        <div class="trust-logo">IIT</div>
+                        <div class="trust-logo">Aerospace</div>
+                        <div class="trust-logo">Robotics</div>
+                        <div class="trust-logo">AgriTech</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="processor-animation">
+                    <div class="chip-container">
+                        <div class="chip">
+                            <div class="chip-core">K3M-1</div>
+                            <div class="data-flow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="problem-solution">
+        <div class="container">
+            <h2 class="section-title">The Edge AI Gap</h2>
+            <div class="split-comparison">
+                <div class="comparison-side problem">
+                    <h3>Traditional Approach</h3>
+                    <ul class="problem-list">
+                        <li><i class="fas fa-times-circle"></i> 62% avoid GenAI due to privacy concerns</li>
+                        <li><i class="fas fa-times-circle"></i> Edge chips can't run modern transformers</li>
+                        <li><i class="fas fa-times-circle"></i> GPUs consume 200-300W</li>
+                        <li><i class="fas fa-times-circle"></i> Cloud dependency = security risk</li>
+                    </ul>
+                </div>
+                <div class="comparison-side solution">
+                    <h3>K3strelMark Solution</h3>
+                    <ul class="solution-list">
+                        <li><i class="fas fa-check-circle"></i> 100% on-device privacy by design</li>
+                        <li><i class="fas fa-check-circle"></i> Native transformer & LLM support</li>
+                        <li><i class="fas fa-check-circle"></i> Ultra-low power <2W operation</li>
+                        <li><i class="fas fa-check-circle"></i> Zero internet dependency</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="solution-preview">
+                <h3>K3M-1 Processor IP + SDK = Modern AI in MCU-class power</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Matrix -->
+    <section class="competitive-matrix">
+        <div class="container">
+            <h2 class="section-title">Why K3strelMark Leads Edge AI</h2>
+            <div class="matrix-table-container">
+                <div class="table-scroll">
+                    <table class="matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Jetson Nano</th>
+                                <th>Hailo-8/15</th>
+                                <th>Coral TPU</th>
+                                <th>SiMa.ai</th>
+                                <th class="highlight-col">K3strelMark</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>YOLOv12 Support</strong></td>
+                                <td>✓ (25 FPS @ 7-10W)</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td class="highlight-cell"><strong>✓ (100 FPS @ <2W)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vision Transformers</strong></td>
+                                <td>Partial</td>
+                                <td>✓ (ViT, DETR, CLIP)</td>
+                                <td>❌</td>
+                                <td>Limited</td>
+                                <td class="highlight-cell"><strong>✓ Full + Advanced</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>LLM/GenAI Support</strong></td>
+                                <td>Partial</td>
+                                <td>✓ (Hailo-15)</td>
+                                <td>❌</td>
+                                <td>Limited</td>
+                                <td class="highlight-cell"><strong>✓ Complete</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Multi-Framework</strong></td>
+                                <td>CUDA Only</td>
+                                <td>Model Zoo</td>
+                                <td>TF-Lite Only</td>
+                                <td>Proprietary</td>
+                                <td class="highlight-cell"><strong>PyTorch/ONNX/TVM</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Power Efficiency</strong></td>
+                                <td>7-10W</td>
+                                <td>2.5W</td>
+                                <td>~2W</td>
+                                <td>~4-10W</td>
+                                <td class="highlight-cell"><strong><2W</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Developer Freedom</strong></td>
+                                <td>Complex</td>
+                                <td>Pre-compiled</td>
+                                <td>Basic</td>
+                                <td>Good</td>
+                                <td class="highlight-cell"><strong>Complete</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <h2 class="section-title">The Complete AI Edge Solution</h2>
+            <div class="tech-overview">
+                <p class="tech-intro">K3strelMark delivers the industry's first complete hardware-software stack designed specifically for edge AI, combining custom RISC-V architecture with proprietary AI acceleration.</p>
+            </div>
+            
+            <div class="tech-stack">
+                <div class="tech-layer fade-in">
+                    <div class="layer-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Hardware Layer</h3>
+                    <p class="layer-subtitle">K3M-1 Processor IP</p>
+                    <ul>
+                        <li><strong>Custom RISC-V architecture</strong> with AI extensions</li>
+                        <li><strong>Proprietary AI instructions</strong> for advanced computations</li>
+                        <li><strong>On-processor data flow</strong> - no external transfers</li>
+                        <li><strong>Multi-precision support</strong> INT8/4/2 modes</li>
+                        <li><strong>Power optimization</strong> dedicated instructions</li>
+                    </ul>
+                    <div class="tech-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">6 TOPS</span>
+                            <span class="spec-label">Performance</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value"><2W</span>
+                            <span class="spec-label">Power</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-layer fade-in">
+                    <div class="layer-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software Layer</h3>
+                    <p class="layer-subtitle">K3M-1 SDK</p>
+                    <ul>
+                        <li><strong>Multi-framework compiler</strong> PyTorch, ONNX, TVM</li>
+                        <li><strong>Model optimization tools</strong> for edge deployment</li>
+                        <li><strong>Runtime environment</strong> with debugging support</li>
+                        <li><strong>Cross-platform compatibility</strong> seamless integration</li>
+                        <li><strong>Developer-friendly APIs</strong> comprehensive documentation</li>
+                    </ul>
+                    <div class="tech-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">4</span>
+                            <span class="spec-label">Frameworks</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value">All</span>
+                            <span class="spec-label">AI Models</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-layer fade-in">
+                    <div class="layer-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Integration Layer</h3>
+                    <p class="layer-subtitle">Complete Solution</p>
+                    <ul>
+                        <li><strong>OEM licensing options</strong> flexible business models</li>
+                        <li><strong>Custom IC design services</strong> on-demand support</li>
+                        <li><strong>Reference implementations</strong> proven use cases</li>
+                        <li><strong>Technical support tiers</strong> comprehensive assistance</li>
+                        <li><strong>Hardware-software co-design</strong> optimized performance</li>
+                    </ul>
+                    <div class="tech-specs">
+                        <div class="spec-item">
+                            <span class="spec-value">24/7</span>
+                            <span class="spec-label">Support</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-value">Custom</span>
+                            <span class="spec-label">Solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Deep Dive -->
+            <div class="tech-deep-dive">
+                <h3>Technical Architecture</h3>
+                <div class="architecture-grid">
+                    <div class="arch-card">
+                        <h4>RISC-V Core</h4>
+                        <p>Enhanced instruction set with custom AI operations optimized for modern neural network architectures including transformers.</p>
+                        <div class="arch-features">
+                            <span class="feature-tag">Custom Instructions</span>
+                            <span class="feature-tag">AI Acceleration</span>
+                            <span class="feature-tag">Custom ALU</span>
+                        </div>
+                    </div>
+                    <div class="arch-card">
+                        <h4>Memory Architecture</h4>
+                        <p>Optimized data flow with on-chip memory hierarchy designed for AI workloads and minimal power consumption.</p>
+                        <div class="arch-features">
+                            <span class="feature-tag">On-Chip Cache</span>
+                            <span class="feature-tag">DMA Controllers</span>
+                            <span class="feature-tag">Data Locality</span>
+                        </div>
+                    </div>
+                    <div class="arch-card">
+                        <h4>AI Accelerators</h4>
+                        <p>Dedicated hardware units for convolution, attention, and normalization operations with multi-precision support.</p>
+                        <div class="arch-features">
+                            <span class="feature-tag">Conv Engines</span>
+                            <span class="feature-tag">Attention Units</span>
+                            <span class="feature-tag">Quantization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="performance">
+        <div class="container">
+            <h2 class="section-title">Benchmarks That Matter</h2>
+            <p class="section-subtitle">Real-world performance metrics from our FPGA implementation, validated across multiple AI models and use cases.</p>
+            
+            <!-- Performance Grid -->
+            <div class="performance-grid">
+                <div class="performance-card">
+                    <h3>Vision AI Leadership</h3>
+                    <p class="card-subtitle">Industry-leading FPS for computer vision models</p>
+                    <div class="benchmark-chart">
+                        <div class="benchmark-item">
+                            <div class="benchmark-header">
+                                <span class="model-name">YOLOv12 (320×320)</span>
+                                <span class="fps-value primary">100 FPS</span>
+                            </div>
+                            <div class="benchmark-comparison">
+    <div class="benchmark-bar">
+        <div class="bar yolo12"></div>
+    </div>
+                                <span class="comparison-note">4x faster than Jetson Nano (25 FPS)</span>
+                            </div>
+                        </div>
+                        <div class="benchmark-item">
+                            <div class="benchmark-header">
+                                <span class="model-name">YOLOv5 (640×640)</span>
+                                <span class="fps-value primary">160 FPS</span>
+                            </div>
+                            <div class="benchmark-comparison">
+    <div class="benchmark-bar">
+        <div class="bar yolo5"></div>
+    </div>
+                                <span class="comparison-note">Full resolution real-time detection</span>
+                            </div>
+                        </div>
+                        <div class="benchmark-item">
+                            <div class="benchmark-header">
+                                <span class="model-name">MobileNetV2 (224×224)</span>
+                                <span class="fps-value primary">500 FPS</span>
+                            </div>
+                            <div class="benchmark-comparison">
+    <div class="benchmark-bar">
+        <div class="bar mobilenet"></div>
+    </div>
+                                <span class="comparison-note">Ultra-fast edge classification</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="performance-card">
+                    <h3>Power Efficiency</h3>
+                    <p class="card-subtitle">Best-in-class performance per watt</p>
+                    <div class="power-comparison">
+                        <div class="power-item">
+                            <div class="power-info">
+                                <span class="device">K3strelMark</span>
+                                <span class="power-value primary"><2W</span>
+                            </div>
+                            <div class="power-bar k3m" style="width: 20%;"></div>
+                        </div>
+                        <div class="power-item">
+                            <div class="power-info">
+                                <span class="device">Hailo-8</span>
+                                <span class="power-value">2.5W</span>
+                            </div>
+                            <div class="power-bar hailo" style="width: 25%;"></div>
+                        </div>
+                        <div class="power-item">
+                            <div class="power-info">
+                                <span class="device">Jetson Nano</span>
+                                <span class="power-value">7-10W</span>
+                            </div>
+                            <div class="power-bar jetson" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="efficiency-metrics">
+                        <div class="metric">
+                            <span class="metric-value">50</span>
+                            <span class="metric-label">FPS/Watt</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">3</span>
+                            <span class="metric-label">TOPS/Watt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="performance-card">
+                    <h3>Model Support</h3>
+                    <p class="card-subtitle">Comprehensive AI model compatibility</p>
+                    <div class="model-support">
+                        <div class="support-category">
+                            <h4>Computer Vision</h4>
+                            <div class="support-items">
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>All YOLO variants (v5-v12)</span>
+                                </div>
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>ResNet, EfficientNet, MobileNet</span>
+                                </div>
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Vision Transformers (ViT)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="support-category">
+                            <h4>Advanced AI</h4>
+                            <div class="support-items">
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Transformer architectures</span>
+                                </div>
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Advanced neural networks</span>
+                                </div>
+                                <div class="support-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Custom model optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Highlights -->
+            <div class="performance-highlights">
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>4x Faster</h4>
+                        <p>Than comparable edge solutions for YOLOv12</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-battery-half"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>5x More Efficient</h4>
+                        <p>Better performance per watt than Jetson</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>100% Private</h4>
+                        <p>All processing happens on-device</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <h2 class="section-title">Intelligence Where It Matters</h2>
+            <p class="section-subtitle">Real-world applications across industries that demand edge AI performance, privacy, and reliability.</p>
+            
+            <div class="solutions-grid">
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Aerospace & Defense</h3>
+                    <p>Autonomous drones, secure communications, and mission-critical systems that operate without internet connectivity.</p>
+                    <div class="solution-stats">
+                        <span class="stat">Zero latency decisions</span>
+                        <span class="stat">Military-grade security</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Real-time object detection and tracking</li>
+                            <li>Autonomous navigation systems</li>
+                            <li>Secure communication protocols</li>
+                            <li>Environmental hazard detection</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">Schedule Defense Briefing</a>
+                </div>
+
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>Private diagnostic devices, real-time medical imaging analysis with HIPAA compliance and patient data protection.</p>
+                    <div class="solution-stats">
+                        <span class="stat">HIPAA compliant</span>
+                        <span class="stat">Real-time diagnostics</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Medical image analysis</li>
+                            <li>Patient monitoring systems</li>
+                            <li>Portable diagnostic devices</li>
+                            <li>Privacy-preserving AI</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">Request Medical Demo</a>
+                </div>
+
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Industrial IoT</h3>
+                    <p>Predictive maintenance in harsh environments, quality control systems that operate reliably without cloud dependency.</p>
+                    <div class="solution-stats">
+                        <span class="stat">99.9% uptime</span>
+                        <span class="stat">Edge processing</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Predictive maintenance</li>
+                            <li>Quality control inspection</li>
+                            <li>Anomaly detection</li>
+                            <li>Process optimization</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">Pilot Program Application</a>
+                </div>
+
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Robotics</h3>
+                    <p>Autonomous navigation, human-robot interaction, and real-time decision making with privacy-preserving AI processing.</p>
+                    <div class="solution-stats">
+                        <span class="stat">Real-time decisions</span>
+                        <span class="stat">Ultra-low power</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Autonomous navigation</li>
+                            <li>Object manipulation</li>
+                            <li>Human-robot interaction</li>
+                            <li>Environment mapping</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">Robotics Integration</a>
+                </div>
+
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Agriculture</h3>
+                    <p>Precision farming, crop monitoring, and agricultural automation in remote locations without reliable internet connectivity.</p>
+                    <div class="solution-stats">
+                        <span class="stat">Offline operation</span>
+                        <span class="stat">Weather resistant</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Crop health monitoring</li>
+                            <li>Pest detection</li>
+                            <li>Yield optimization</li>
+                            <li>Autonomous farming equipment</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">AgriTech Demo</a>
+                </div>
+
+                <div class="solution-card fade-in">
+                    <div class="solution-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>Smart Cities</h3>
+                    <p>Traffic optimization, security systems, and urban infrastructure monitoring with GDPR-compliant privacy protection.</p>
+                    <div class="solution-stats">
+                        <span class="stat">GDPR compliant</span>
+                        <span class="stat">City-scale deployment</span>
+                    </div>
+                    <div class="solution-features">
+                        <ul>
+                            <li>Traffic flow optimization</li>
+                            <li>Public safety monitoring</li>
+                            <li>Infrastructure inspection</li>
+                            <li>Environmental monitoring</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="solution-cta">Smart City Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Where Scientific Excellence Meets Commercial Vision</h2>
+            <p class="section-subtitle">A world-class team combining deep technical expertise with proven commercial success, backed by renowned advisors and research institutions.</p>
+            
+            <!-- Team Profiles -->
+            <div class="team-grid">
+                <div class="team-member slide-in-left">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Karthikeyan Kalyanasundaram</h3>
+                        <p class="member-title">CTO & Co-Founder</p>
+                        <p class="member-credentials">PhD in Surgical Robotics • 11 years HW/SW co-design • 2 patents</p>
+                        <div class="member-details">
+                            <p>Hardware-software integration expert with deep experience in RISC-V, PyTorch, and Verilog. Since 2019, researcher at Istituto Italiano di Tecnologia (IIT) in Genova, Italy. Leading the development of cutting-edge AI solutions optimized for embedded platforms.</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">RISC-V Architecture</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">Verilog HDL</span>
+                                <span class="skill-tag">Hardware-Software Co-design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member slide-in-left">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Eleonora Servodio</h3>
+                        <p class="member-title">CEO & Co-Founder</p>
+                        <p class="member-credentials">Former Amazon VM • 2nd-time founder • MBA Bocconi</p>
+                        <div class="member-details">
+                            <p>Technology transfer and startup incubation expert managing the incubator at IIT. Former Amazon Vendor Manager who negotiated with 100+ companies and launched new product categories. Currently operating successful e-commerce business.</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Business Development</span>
+                                <span class="skill-tag">Technology Transfer</span>
+                                <span class="skill-tag">Startup Incubation</span>
+                                <span class="skill-tag">Strategic Partnerships</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member slide-in-left">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Undisclosed</h3>
+                        <p class="member-title">Chief AI Officer & Co-Founder</p>
+                        <!-- <p>Available to Qualified Investors</p> -->
+                        <p class="member-credentials">PhD Computer Vision • 17 years AI/ML • Published author</p>
+                        <div class="member-details">
+                            <p>Senior researcher with extensive industrial background at leading technology institutes. Expert in real-time AI applications with proven track record in computer vision and autonomous systems development. Available for direct discussions with qualified investors and serious partners.</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">Deep Learning</span>
+                                <span class="skill-tag">Image Processing</span>
+                                <span class="skill-tag">Real-time AI</span>
+                            </div>
+                            <!--
+                            <div class="contact-note">
+                                <p><em>Direct contact available through: <a href="mailto:info@k3strelmark.com">info@k3strelmark.com</a></em></p>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advisors -->
+            <div class="advisors-section">
+                <h3>Advisors & Mentors</h3>
+                <div class="advisors-grid">
+                    <div class="advisor fade-in">
+                        <div class="advisor-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h4>Marco Crepaldi</h4>
+                        <p class="advisor-title">Scientific Advisor</p>
+                        <p>Electronic Design Lab Coordinator at IIT, expert in analog and digital circuit design for AI applications.</p>
+                    </div>
+                    <div class="advisor fade-in">
+                        <div class="advisor-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Nadia Fabrizio</h4>
+                        <p class="advisor-title">Technology Transfer Expert</p>
+                        <p>Technology Transfer specialist at University of Bergamo with extensive experience in commercializing deep-tech innovations.</p>
+                    </div>
+                    <div class="advisor fade-in">
+                        <div class="advisor-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Filippo Satolli</h4>
+                        <p class="advisor-title">Startup Mentor</p>
+                        <p>CEO at Startup Italia with deep expertise in scaling tech startups and go-to-market strategies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traction -->
+            <div class="traction-section">
+                <h3>Current Traction</h3>
+                <div class="traction-grid">
+                    <div class="traction-item">
+                        <div class="traction-number">4</div>
+                        <div class="traction-label">Companies Testing Solutions</div>
+                        <div class="traction-detail">2 aerospace, 1 agritech, 1 robotics</div>
+                    </div>
+                    <div class="traction-item">
+                        <div class="traction-number">1</div>
+                        <div class="traction-label">Investor Soft Commitment</div>
+                        <div class="traction-detail">For internal POC at IIT lab</div>
+                    </div>
+                    <div class="traction-item">
+                        <div class="traction-number">TRL5</div>
+                        <div class="traction-label">Technology Readiness</div>
+                        <div class="traction-detail">Functional HW-SW system on FPGA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Model Section -->
+    <section id="business" class="business-model">
+        <div class="container">
+            <h2 class="section-title">Flexible Business Models for Every Need</h2>
+            <p class="section-subtitle">From startups to enterprise deployments, we offer licensing options that scale with your business requirements.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="card-header">
+                        <h3>IP License</h3>
+                        <p class="price">One-time fee</p>
+                        <p class="price-subtitle">Perfect for new product development</p>
+                    </div>
+                    <div class="card-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Complete processor IP</li>
+                            <li><i class="fas fa-check"></i> Encrypted Verilog source code</li>
+                            <li><i class="fas fa-check"></i> Technical documentation</li>
+                            <li><i class="fas fa-check"></i> Integration support</li>
+                            <li><i class="fas fa-check"></i> Custom IC design services</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-outline btn-full">Get Quote</a>
+                </div>
+
+                <div class="pricing-card featured fade-in">
+                    <div class="card-badge">Most Popular</div>
+                    <div class="card-header">
+                        <h3>Royalty Model</h3>
+                        <p class="price">Per-unit fees</p>
+                        <p class="price-subtitle">Ideal for volume production</p>
+                    </div>
+                    <div class="card-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Volume production licensing</li>
+                            <li><i class="fas fa-check"></i> Scalable pricing structure</li>
+                            <li><i class="fas fa-check"></i> Ongoing technical support</li>
+                            <li><i class="fas fa-check"></i> Software updates access</li>
+                            <li><i class="fas fa-check"></i> Priority partnership status</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-primary btn-full">Start Partnership</a>
+                </div>
+
+                <div class="pricing-card fade-in">
+                    <div class="card-header">
+                        <h3>SDK Freemium</h3>
+                        <p class="price">Free + Premium</p>
+                        <p class="price-subtitle">Developer-friendly approach</p>
+                    </div>
+                    <div class="card-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Open community version</li>
+                            <li><i class="fas fa-check"></i> Premium developer tools</li>
+                            <li><i class="fas fa-check"></i> Priority technical support</li>
+                            <li><i class="fas fa-check"></i> Custom integrations</li>
+                            <li><i class="fas fa-check"></i> Cloud deployment tools</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-outline btn-full">Download SDK</a>
+                </div>
+            </div>
+
+            <!-- Market Information -->
+            <div class="market-info">
+                <h3>Market Opportunity</h3>
+                <div class="market-stats">
+                    <div class="market-stat">
+                        <div class="stat-value">€130B</div>
+                        <div class="stat-label">Global Edge AI Market by 2034</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-value">€45B</div>
+                        <div class="stat-label">European Edge AI Market by 2034</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-value">€100M</div>
+                        <div class="stat-label">Our Target SOM in 5 Years</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-value">22.2%</div>
+                        <div class="stat-label">10-Year CAGR</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Funding Information -->
+            <div class="funding-info">
+                <h3>Funding Strategy</h3>
+                <div class="funding-phases">
+                    <div class="phase-card">
+                        <h4>Phase 1: Validation (2025-2026)</h4>
+                        <div class="phase-details">
+                            <div class="funding-amount">€3M</div>
+                            <div class="funding-use">
+                                <p><strong>Focus:</strong> TRL 5 → TRL 7</p>
+                                <ul>
+                                    <li>Technology validation with 20 partners</li>
+                                    <li>Team expansion (technical hires)</li>
+                                    <li>FPGA product development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phase-card">
+                        <h4>Phase 2: Silicon (2026-2028)</h4>
+                        <div class="phase-details">
+                            <div class="funding-amount">€20M</div>
+                            <div class="funding-use">
+                                <p><strong>Focus:</strong> TRL 7 → TRL 8</p>
+                                <ul>
+                                    <li>ASIC development with academia</li>
+                                    <li>Foundry partnerships</li>
+                                    <li>Chip design team expansion</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phase-card">
+                        <h4>Phase 3: Scale (2028+)</h4>
+                        <div class="phase-details">
+                            <div class="funding-amount">€20M</div>
+                            <div class="funding-use">
+                                <p><strong>Focus:</strong> TRL 8 → TRL 9</p>
+                                <ul>
+                                    <li>Global go-to-market</li>
+                                    <li>Tier 1 partnerships</li>
+                                    <li>Sales & support scaling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Transform Your Edge AI?</h2>
+            <p class="section-subtitle">Whether you're an engineer, business leader, or potential partner—let's discuss how K3strelMark can accelerate your AI initiatives.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's discuss your needs</h3>
+                    <p>We work with companies across industries to integrate advanced AI capabilities at the edge. From proof-of-concept to production deployment, our team provides comprehensive support.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>General Inquiries</h4>
+                                <p>info@k3strelmark.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Direct Contact</h4>
+                                <p>+39 347 732 7645</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Istituto Italiano di Tecnologia<br>Genova, Italy</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-linkedin"></i>
+                            <div>
+                                <h4>Connect with Team</h4>
+                                <p>Follow our founders on LinkedIn</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="beta-program">
+                        <h4>Join Our Beta Program</h4>
+                        <p>Get early access to K3strelMark technology and work directly with our engineering team to optimize performance for your use case.</p>
+                        <div class="beta-benefits">
+                            <span class="benefit-tag">Early Access</span>
+                            <span class="benefit-tag">Technical Support</span>
+                            <span class="benefit-tag">Custom Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="audience">I am a:</label>
+                        <select id="audience" name="audience" required>
+                            <option value="">Select your role</option>
+                            <option value="engineer">Engineer/Developer</option>
+                            <option value="business">Business Leader/CTO</option>
+                            <option value="partner">Potential Partner/OEM</option>
+                            <option value="investor">Investor</option>
+                            <option value="media">Media/Press</option>
+                            <option value="academic">Academic/Researcher</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" placeholder="Company Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="industry" name="industry" placeholder="Industry">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell us about your project, use case, or questions..." rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="beta" name="beta">
+                            <span class="checkmark"></span>
+                            I'm interested in joining the beta program
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">K<span class="logo-accent">3</span>strelMark</span>
+                        <span class="tagline">Intelligence Within</span>
+                    </div>
+                    <p>Redefining where and how AI works by changing hardware architecture at its core. Bringing intelligence to every device with privacy, efficiency, and performance.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Technology</h4>
+                        <ul>
+                            <li><a href="#technology">K3M-1 Processor</a></li>
+                            <li><a href="#technology">SDK & Tools</a></li>
+                            <li><a href="#performance">Benchmarks</a></li>
+                            <li><a href="#technology">Technical Docs</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Solutions</h4>
+                        <ul>
+                            <li><a href="#solutions">Aerospace & Defense</a></li>
+                            <li><a href="#solutions">Healthcare</a></li>
+                            <li><a href="#solutions">Industrial IoT</a></li>
+                            <li><a href="#solutions">Robotics</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#team">About Us</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#business">Business Model</a></li>
+                            <li><a href="#contact">Careers</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#contact">Beta Program</a></li>
+                            <li><a href="#contact">Downloads</a></li>
+                            <li><a href="#contact">Support</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 K3strelMark. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+// Global variables
+let isMenuOpen = false;
+
+// DOM Content Loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initNavigation();
+    initAnimations();
+    initCounters();
+    initContactForm();
+    initSmoothScrolling();
+});
+
+// Navigation functionality
+function initNavigation() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', toggleMobileMenu);
+    }
+    
+    // Close menu when clicking on links
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', handleNavbarScroll);
+}
+
+function toggleMobileMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+        navMenu.style.display = 'flex';
+        navMenu.style.flexDirection = 'column';
+        navMenu.style.position = 'absolute';
+        navMenu.style.top = '100%';
+        navMenu.style.left = '0';
+        navMenu.style.right = '0';
+        navMenu.style.background = 'white';
+        navMenu.style.padding = '2rem';
+        navMenu.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        hamburger.classList.add('active');
+    } else {
+        closeMobileMenu();
+    }
+}
+
+function closeMobileMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    isMenuOpen = false;
+    
+    if (window.innerWidth <= 768) {
+        navMenu.style.display = 'none';
+    }
+    
+    hamburger.classList.remove('active');
+}
+
+function handleNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
+    const scrolled = window.scrollY > 50;
+    
+    if (scrolled) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+    } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = 'none';
+    }
+}
+
+// Animation functionality
+function initAnimations() {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all elements with animation classes
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Counter animation functionality
+function initCounters() {
+    const counters = document.querySelectorAll('.counter-number');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+}
+
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+    }, 16);
+}
+
+// Contact form functionality
+function initContactForm() {
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactSubmit);
+    }
+}
+
+function handleContactSubmit(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    const data = {
+        audience: formData.get('audience'),
+        name: formData.get('name'),
+        email: formData.get('email'),
+        company: formData.get('company'),
+        industry: formData.get('industry'),
+        message: formData.get('message'),
+        beta: formData.get('beta') ? true : false
+    };
+    
+    // Show success message
+    showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+    
+    // Reset form
+    e.target.reset();
+    
+    // In a real implementation, you would send this data to your server
+    console.log('Contact form data:', data);
+}
+
+// Smooth scrolling functionality
+function initSmoothScrolling() {
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 80;
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+                
+                closeMobileMenu();
+            }
+        });
+    });
+}
+
+// Utility functions
+function showNotification(message, type = 'info') {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.textContent = message;
+    
+    // Style the notification
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem 2rem;
+        background: ${type === 'success' ? '#10b981' : '#f59e0b'};
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10000;
+        opacity: 1;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+        max-width: 300px;
+        font-weight: 500;
+    `;
+    
+    // Add to page
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+        notification.style.opacity = '1';
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Remove after 5 seconds
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 5000);
+}
+
+// Resize handler
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        const navMenu = document.querySelector('.nav-menu');
+        navMenu.style.display = 'flex';
+        navMenu.style.flexDirection = 'row';
+        navMenu.style.position = 'static';
+        navMenu.style.background = 'transparent';
+        navMenu.style.padding = '0';
+        navMenu.style.boxShadow = 'none';
+        closeMobileMenu();
+    }
+});
+
+// Performance optimization
+let ticking = false;
+
+function requestTick() {
+    if (!ticking) {
+        requestAnimationFrame(updateAnimations);
+        ticking = true;
+    }
+}
+
+function updateAnimations() {
+    // Update any frame-based animations here
+    ticking = false;
+}
+
+// Scroll performance optimization
+let scrollTimer = null;
+window.addEventListener('scroll', () => {
+    if (scrollTimer !== null) {
+        clearTimeout(scrollTimer);
+    }
+    scrollTimer = setTimeout(() => {
+        requestTick();
+    }, 150);
+});
+
+// Error handling
+window.addEventListener('error', (e) => {
+    console.error('Script error:', e.error);
+});
+
+// Initialize any additional features
+document.addEventListener('DOMContentLoaded', () => {
+    // Add any additional initialization here
+    console.log('K3strelMark website loaded successfully');
+});
+
+    </script>
+</body>
+</html>
